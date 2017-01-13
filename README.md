@@ -1,5 +1,9 @@
 # sentry
 
+[![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/sentry)](https://goreportcard.com/report/github.com/gin-contrib/sentry)
+[![GoDoc](https://godoc.org/github.com/gin-contrib/sentry?status.svg)](https://godoc.org/github.com/gin-contrib/sentry)
+[![Join the chat at https://gitter.im/gin-gonic/gin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gin-gonic/gin)
+
 Middleware to integrate with [sentry](https://getsentry.com/) crash reporting.  Middleware version of `raven.RecoveryHandler()`.
 
 ## Example
