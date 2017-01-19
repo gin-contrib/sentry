@@ -8,6 +8,8 @@ Middleware to integrate with [sentry](https://getsentry.com/) crash reporting.  
 
 ## Example
 
+See the [example](example/main.go)
+
 ```go
 package main
 
