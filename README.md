@@ -14,7 +14,7 @@ See the [example](example/main.go)
 package main
 
 import (
-	"github.com/getsentry/raven-go"｀
+	"github.com/getsentry/raven-go"
 	"github.com/gin-contrib/sentry"
 	"gopkg.in/gin-gonic/gin.v1"
 )
