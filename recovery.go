@@ -7,7 +7,7 @@ import (
 	"runtime/debug"
 
 	"github.com/getsentry/raven-go"
-	"gopkg.in/gin-gonic/gin.v1"
+	"github.com/gin-gonic/gin"
 )
 
 // Recovery middleware for sentry crash reporting
