@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/getsentry/raven-go"｀
+	"github.com/getsentry/raven-go"
 	"github.com/gin-contrib/sentry"
 	"github.com/gin-gonic/gin"
 )
