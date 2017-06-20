@@ -1,5 +1,6 @@
 # sentry
 
+[![Build Status](https://travis-ci.org/gin-contrib/sentry.svg?branch=master)](https://travis-ci.org/gin-contrib/sentry)
 [![Go Report Card](https://goreportcard.com/badge/github.com/gin-contrib/sentry)](https://goreportcard.com/report/github.com/gin-contrib/sentry)
 [![GoDoc](https://godoc.org/github.com/gin-contrib/sentry?status.svg)](https://godoc.org/github.com/gin-contrib/sentry)
 [![Join the chat at https://gitter.im/gin-gonic/gin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gin-gonic/gin)
@@ -10,6 +11,7 @@ Middleware to integrate with [sentry](https://getsentry.com/) crash reporting.  
 
 See the [example](example/main.go)
 
+[embedmd]:# (example/main.go go)
 ```go
 package main
 
