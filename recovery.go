@@ -3,6 +3,7 @@ package sentry
 import (
 	"errors"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 	"runtime/debug"
 
@@ -21,21 +22,28 @@ func Recovery(client *raven.Client, onlyCrashes bool) gin.HandlerFunc {
 			if rval := recover(); rval != nil {
 				debug.PrintStack()
 				rvalStr := fmt.Sprint(rval)
+				x, _ := ioutil.ReadAll(c.Request.Body)
+				h := raven.NewHttp(c.Request)
+				h.Data = string(x)
+
 				client.CaptureMessage(rvalStr, flags, raven.NewException(errors.New(rvalStr), raven.NewStacktrace(2, 3, nil)),
-					raven.NewHttp(c.Request))
+					h)
 				c.AbortWithStatus(http.StatusInternalServerError)
 			}
 			if !onlyCrashes {
 				for _, item := range c.Errors {
+					x, _ := ioutil.ReadAll(c.Request.Body)
+					h := raven.NewHttp(c.Request)
+					h.Data = string(x)
+
 					client.CaptureMessage(item.Error(), flags, &raven.Message{
 						Message: item.Error(),
 						Params:  []interface{}{item.Meta},
 					},
-						raven.NewHttp(c.Request))
+						h)
 				}
 			}
 		}()
-
 		c.Next()
 	}
 }
