@@ -12,9 +12,6 @@
 
 ---
 
-
-Middleware to integrate with [sentry](https://sentry.io/) crash reporting.  Middleware version of `raven.RecoveryHandler()`.
-
 ## Example
 
 See the [example](example/main.go)
