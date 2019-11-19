@@ -5,7 +5,7 @@
 [![GoDoc](https://godoc.org/github.com/gin-contrib/sentry?status.svg)](https://godoc.org/github.com/gin-contrib/sentry)
 [![Join the chat at https://gitter.im/gin-gonic/gin](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/gin-gonic/gin)
 
-Middleware to integrate with [sentry](https://getsentry.com/) crash reporting.  Middleware version of `raven.RecoveryHandler()`.
+Middleware to integrate with [sentry](https://sentry.io/) crash reporting.  Middleware version of `raven.RecoveryHandler()`.
 
 ## Example
 
